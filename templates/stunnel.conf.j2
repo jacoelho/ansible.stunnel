@@ -16,15 +16,6 @@ engineDefault = {{ item }}
 engineDefault = {{ stunnel_engine_default }}
 {% endif %}
 {% endif %}
-{% if stunnel_syslong is defined and stunnel_syslong|string|length > 0 %}
-{% if stunnel_syslong|is_list %}
-{% for item in stunnel_syslong %}
-syslog = {{ item }}
-{% endfor %}
-{% else %}
-syslog = {{ stunnel_syslong }}
-{% endif %}
-{% endif %}
 {% if stunnel_engine is defined and stunnel_engine|string|length > 0 %}
 {% if stunnel_engine|is_list %}
 {% for item in stunnel_engine %}
@@ -32,6 +23,24 @@ engine = {{ item }}
 {% endfor %}
 {% else %}
 engine = {{ stunnel_engine }}
+{% endif %}
+{% endif %}
+{% if stunnel_syslog is defined and stunnel_syslog|string|length > 0 %}
+{% if stunnel_syslog|is_list %}
+{% for item in stunnel_syslog %}
+syslog = {{ item }}
+{% endfor %}
+{% else %}
+syslog = {{ stunnel_syslog }}
+{% endif %}
+{% endif %}
+{% if stunnel_key is defined and stunnel_key|string|length > 0 %}
+{% if stunnel_key|is_list %}
+{% for item in stunnel_key %}
+key = {{ item }}
+{% endfor %}
+{% else %}
+key = {{ stunnel_key }}
 {% endif %}
 {% endif %}
 {% if stunnel_foreground is defined and stunnel_foreground|string|length > 0 %}
@@ -43,22 +52,13 @@ foreground = {{ item }}
 foreground = {{ stunnel_foreground }}
 {% endif %}
 {% endif %}
-{% if stunnel_pid is defined and stunnel_pid|string|length > 0 %}
-{% if stunnel_pid|is_list %}
-{% for item in stunnel_pid %}
-pid = {{ item }}
+{% if stunnel_setuid is defined and stunnel_setuid|string|length > 0 %}
+{% if stunnel_setuid|is_list %}
+{% for item in stunnel_setuid %}
+setuid = {{ item }}
 {% endfor %}
 {% else %}
-pid = {{ stunnel_pid }}
-{% endif %}
-{% endif %}
-{% if stunnel_debug is defined and stunnel_debug|string|length > 0 %}
-{% if stunnel_debug|is_list %}
-{% for item in stunnel_debug %}
-debug = {{ item }}
-{% endfor %}
-{% else %}
-debug = {{ stunnel_debug }}
+setuid = {{ stunnel_setuid }}
 {% endif %}
 {% endif %}
 {% if stunnel_options is defined and stunnel_options|string|length > 0 %}
@@ -68,6 +68,15 @@ options = {{ item }}
 {% endfor %}
 {% else %}
 options = {{ stunnel_options }}
+{% endif %}
+{% endif %}
+{% if stunnel_setgid is defined and stunnel_setgid|string|length > 0 %}
+{% if stunnel_setgid|is_list %}
+{% for item in stunnel_setgid %}
+setgid = {{ item }}
+{% endfor %}
+{% else %}
+setgid = {{ stunnel_setgid }}
 {% endif %}
 {% endif %}
 {% if stunnel_rnd_bytes is defined and stunnel_rnd_bytes|string|length > 0 %}
@@ -88,6 +97,15 @@ fips = {{ item }}
 fips = {{ stunnel_fips }}
 {% endif %}
 {% endif %}
+{% if stunnel_cert is defined and stunnel_cert|string|length > 0 %}
+{% if stunnel_cert|is_list %}
+{% for item in stunnel_cert %}
+cert = {{ item }}
+{% endfor %}
+{% else %}
+cert = {{ stunnel_cert }}
+{% endif %}
+{% endif %}
 {% if stunnel_compression is defined and stunnel_compression|string|length > 0 %}
 {% if stunnel_compression|is_list %}
 {% for item in stunnel_compression %}
@@ -106,6 +124,15 @@ service = {{ item }}
 service = {{ stunnel_service }}
 {% endif %}
 {% endif %}
+{% if stunnel_ca_file is defined and stunnel_ca_file|string|length > 0 %}
+{% if stunnel_ca_file|is_list %}
+{% for item in stunnel_ca_file %}
+CAfile = {{ item }}
+{% endfor %}
+{% else %}
+CAfile = {{ stunnel_ca_file }}
+{% endif %}
+{% endif %}
 {% if stunnel_chroot is defined and stunnel_chroot|string|length > 0 %}
 {% if stunnel_chroot|is_list %}
 {% for item in stunnel_chroot %}
@@ -113,6 +140,15 @@ chroot = {{ item }}
 {% endfor %}
 {% else %}
 chroot = {{ stunnel_chroot }}
+{% endif %}
+{% endif %}
+{% if stunnel_ssl_version is defined and stunnel_ssl_version|string|length > 0 %}
+{% if stunnel_ssl_version|is_list %}
+{% for item in stunnel_ssl_version %}
+sslVersion = {{ item }}
+{% endfor %}
+{% else %}
+sslVersion = {{ stunnel_ssl_version }}
 {% endif %}
 {% endif %}
 {% if stunnel_socket is defined and stunnel_socket|string|length > 0 %}
@@ -142,22 +178,22 @@ output = {{ item }}
 output = {{ stunnel_output }}
 {% endif %}
 {% endif %}
-{% if stunnel_group is defined and stunnel_group|string|length > 0 %}
-{% if stunnel_group|is_list %}
-{% for item in stunnel_group %}
-group = {{ item }}
+{% if stunnel_pid is defined and stunnel_pid|string|length > 0 %}
+{% if stunnel_pid|is_list %}
+{% for item in stunnel_pid %}
+pid = {{ item }}
 {% endfor %}
 {% else %}
-group = {{ stunnel_group }}
+pid = {{ stunnel_pid }}
 {% endif %}
 {% endif %}
-{% if stunnel_user is defined and stunnel_user|string|length > 0 %}
-{% if stunnel_user|is_list %}
-{% for item in stunnel_user %}
-user = {{ item }}
+{% if stunnel_debug is defined and stunnel_debug|string|length > 0 %}
+{% if stunnel_debug|is_list %}
+{% for item in stunnel_debug %}
+debug = {{ item }}
 {% endfor %}
 {% else %}
-user = {{ stunnel_user }}
+debug = {{ stunnel_debug }}
 {% endif %}
 {% endif %}
 {% if stunnel_egd is defined and stunnel_egd|string|length > 0 %}

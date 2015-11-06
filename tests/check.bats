@@ -1,13 +1,9 @@
 #!/usr/bin/env bats
 
-@test "redis-server is installed and is in the PATH" {
-  command -v redis-server
+@test "stunnel is installed and is in the PATH" {
+  command -v stunnel
 }
 
-@test "should have redis-server running" {
-  [ "$(ps aux | grep redis-server | grep -v grep)" ]
-}
-
-@test "redis should be listening for connections" {
-  [ "$(netstat -an |grep 0.0.0.0:6379)" ]
+@test "should have stunnel running" {
+  [ "$(ps aux | grep stunnel | grep -v grep)" ]
 }

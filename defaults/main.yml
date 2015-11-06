@@ -3,17 +3,20 @@
 stunnel_version: ""
 stunnel_conf: "/etc/stunnel/stunnel.conf"
 
-stunnel_user: nobody
-stunnel_group: nogroup
+stunnel_setuid: ""
+stunnel_setgid: ""
 stunnel_pid: "/var/run/stunnel.pid"
-stunnel_foreground: yes
+stunnel_foreground: "no"
 stunnel_debug: info
-stunnel_log: append
+stunnel_log: ""
 stunnel_output: "/var/log/stunnel.log"
+stunnel_cert: ""
+stunnel_key: ""
+stunnel_ca_file: ""
 stunnel_options:
   - NO_SSLv2
   - NO_SSLv3
-stunnel_syslong: ""
+stunnel_syslog: ""
 stunnel_fips: ""
 stunnel_chroot: ""
 stunnel_compression: ""
@@ -25,6 +28,7 @@ stunnel_rnd_bytes: ""
 stunnel_rnd_overwrite: ""
 stunnel_service: ""
 stunnel_socket: ""
+stunnel_ssl_version: ""
 
 stunnel_services:
   - name: ""

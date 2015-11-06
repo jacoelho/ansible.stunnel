@@ -22,7 +22,6 @@ Vagrant.configure(2) do |config|
       apt-get install -qq -y bats
     }
     /vagrant/tests/check.bats
-    sudo cat /etc/stunnel/stunnel.conf
   END
 end
 
