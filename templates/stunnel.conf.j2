@@ -178,6 +178,15 @@ output = {{ item }}
 output = {{ stunnel_output }}
 {% endif %}
 {% endif %}
+{% if stunnel_verify is defined and stunnel_verify|string|length > 0 %}
+{% if stunnel_verify|is_list %}
+{% for item in stunnel_verify %}
+verify = {{ item }}
+{% endfor %}
+{% else %}
+verify = {{ stunnel_verify }}
+{% endif %}
+{% endif %}
 {% if stunnel_pid is defined and stunnel_pid|string|length > 0 %}
 {% if stunnel_pid|is_list %}
 {% for item in stunnel_pid %}

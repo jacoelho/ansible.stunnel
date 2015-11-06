@@ -25,6 +25,7 @@ stunnel_global_key:
   stunnel_key: "key"
   stunnel_ca_file: "CAfile"
   stunnel_ssl_version: "sslVersion"
+  stunnel_verify: "verify"
 
 stunnel_services_key:
   accept: "accept"

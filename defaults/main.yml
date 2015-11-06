@@ -29,6 +29,7 @@ stunnel_rnd_overwrite: ""
 stunnel_service: ""
 stunnel_socket: ""
 stunnel_ssl_version: ""
+stunnel_verify: ""
 
 stunnel_services:
   - name: ""
