@@ -1,23 +1,29 @@
-jacoelho.redis
+jacoelho.stunnel
 =========
 
-An ansible role that installs redis-server on Ubuntu.
+An ansible role that installs stunnel4 on Ubuntu.
 
 Tested on ubuntu 14.04 (Trusty)
 
 Role Variables
 --------------
 
-Each redis configuration is mapped to a variable (see `defaults/main.yml`)
+Each stunnel configuration is mapped to a variable (see `defaults/main.yml`)
 
-To pin a specific redis version:
+To pin a specific stunnel version:
 
-    redis_version: ""
+    stunnel_version: ""
 
-Configure listening address and port:
+Sample configuration:
 
-    redis_port: "6379"
-    redis_bind: "0.0.0.0"
+
+    stunnel_cert: /etc/ssl/certs/ssl-cert-snakeoil.pem
+    stunnel_key: /etc/ssl/private/ssl-cert-snakeoil.key
+    stunnel_client: "yes"
+    stunnel_services:
+      - name: proxy
+        connect: "1.2.3.4:2000"
+        accept: "3000"
 
 Dependencies
 ------------
@@ -29,7 +35,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-        - { role: jacoelho.redis, redis_bind: "0.0.0.0" }
+        - { role: jacoelho.stunnel }
 
 License
 -------
