@@ -1,6 +1,8 @@
 ---
 
 stunnel_global_key:
+  stunnel_user: "user"
+  stunnel_group: "group"
   stunnel_pid: "pid"
   stunnel_foreground: "foreground"
   stunnel_debug: "debug"
@@ -12,14 +14,15 @@ stunnel_global_key:
   stunnel_compression: "compression"
   stunnel_egd: "EGD"
   stunnel_engine: "engine"
-  stunnel_ctrl: "engineCtrl"
+  stunnel_engine_ctrl: "engineCtrl"
   stunnel_engine_default: "engineDefault"
   stunnel_rnd_bytes: "RNDbytes"
   stunnel_rnd_overwrite: "RNDoverwrite"
   stunnel_service: "service"
   stunnel_socket: "socket"
+  stunnel_options: "options"
 
-stunnel_service_key:
+stunnel_services_key:
   accept: "accept"
   ca_path: "CApath"
   ca_file: "CAfile"

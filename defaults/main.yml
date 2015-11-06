@@ -1,90 +1,88 @@
 ---
 
 stunnel_version: ""
+stunnel_conf: "/etc/stunnel/stunnel.conf"
+
 stunnel_user: nobody
 stunnel_group: nogroup
-
-stunnel_pid:
+stunnel_pid: "/var/run/stunnel.pid"
 stunnel_foreground: yes
 stunnel_debug: info
 stunnel_log: append
-stunnel_output: /usr/local/var/log/stunnel.log
-stunnel_syslong: "yes"
-stunnel_fips: yes
-stunnel_chroot: path
-stunnel_compression: adas
-stunnel_egd: adasda
-stunnel_engine: adadad
-stunnel_ctrl:
-  - a
-  - b
-  - b
-stunnel_engine_default: ALL
-stunnel_rnd_bytes: adsad
-stunnel_rnd_overwrite: asdada
-stunnel_service: stunnel
-stunnel_socket: "a:SO_REUSEADDR=no"
+stunnel_output: "/var/log/stunnel.log"
+stunnel_options:
+  - NO_SSLv2
+  - NO_SSLv3
+stunnel_syslong: ""
+stunnel_fips: ""
+stunnel_chroot: ""
+stunnel_compression: ""
+stunnel_egd: ""
+stunnel_engine: ""
+stunnel_engine_ctrl: ""
+stunnel_engine_default: ""
+stunnel_rnd_bytes: ""
+stunnel_rnd_overwrite: ""
+stunnel_service: ""
+stunnel_socket: ""
 
 stunnel_services:
-  - name:
-    accept:
-    ca_path:
-    ca_file:
-    cert:
-      check_email:
-    check_host:
-    check_ip:
-    ciphers:
-    client:
+  - name: ""
+    accept: ""
+    ca_path: ""
+    ca_file: ""
+    cert: ""
+    check_email: ""
+    check_host: ""
+    check_ip: ""
+    ciphers: ""
+    client: ""
     config:
-      - a
-      - b
-      - c
-    connect:
-    crl_path:
-    crl_file:
-    curve:
-    log_id:
-    debug:
-    delay:
-    engine_id:
-    engine_num:
-    exec:
-      exec_args:
-    failover:
-    ident:
-    include:
-    key:
-    libwrap:
-    local:
-    sni:
-    ocsp:
-    ocspaia:
-    ocspflag:
-    options:
-    protocol:
-    protocol_authentication:
-    protocol_domain:
-    protocol_host:
-    protocol_password:
-    protocol_username:
-    psk_identity:
-    psk_secrets:
-    pty:
-    redirect:
-    renegotiation:
-    reset:
-    retry:
-    setgid:
-    setuid:
-    session_cache_size:
-    session_cache_timeout:
-    sessond:
-    ssl_version:
-    stack:
-    timeout_busy:
-    timeout_close:
-    timeout_connect:
-    timeout_idle:
-    transparent:
-    verify:
+    connect: ""
+    crl_path: ""
+    crl_file: ""
+    curve: ""
+    log_id: ""
+    debug: ""
+    delay: ""
+    engine_id: ""
+    engine_num: ""
+    exec: ""
+    exec_args: ""
+    failover: ""
+    ident: ""
+    include: ""
+    key: ""
+    libwrap: ""
+    local: ""
+    sni: ""
+    ocsp: ""
+    ocspaia: ""
+    ocspflag: ""
+    options: ""
+    protocol: ""
+    protocol_authentication: ""
+    protocol_domain: ""
+    protocol_host: ""
+    protocol_password: ""
+    protocol_username: ""
+    psk_identity: ""
+    psk_secrets: ""
+    pty: ""
+    redirect: ""
+    renegotiation: ""
+    reset: ""
+    retry: ""
+    setgid: ""
+    setuid: ""
+    session_cache_size: ""
+    session_cache_timeout: ""
+    sessond: ""
+    ssl_version: ""
+    stack: ""
+    timeout_busy: ""
+    timeout_close: ""
+    timeout_connect: ""
+    timeout_idle: ""
+    transparent: ""
+    verify: ""

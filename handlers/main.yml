@@ -1,8 +1,8 @@
 ---
 
-- name: restart redis
+- name: restart stunnel
   service:
-    name: redis-server
+    name: stunnel4
     state: "restarted"
   become: yes
   become_method: sudo

@@ -3,5 +3,14 @@
 - name: testing
   hosts: all
 
+  vars:
+    stunnel_services:
+      - name: redis-server-eth0
+        connect: "127.0.0.1:2000"
+        accept: "{{ ansible_eth0.ipv4.address }}:3000"
+      - name: redis-server-cluster-eth0
+        connect: "127.0.0.1:2000"
+        accept: "{{ ansible_eth0.ipv4.address }}:3000"
+
   roles:
-    - role: ansible.redis
+    - role: ansible.stunnel

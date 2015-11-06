@@ -2,7 +2,7 @@
 
 - name: stunnel | install (pinned version)
   apt:
-    pkg: "stunnel={{ stunnel_version }}"
+    pkg: "stunnel4={{ stunnel_version }}"
     state: present
     update_cache: yes
     cache_valid_time: 3600
@@ -12,7 +12,7 @@
 
 - name: stunnel | install
   apt:
-    pkg: "stunnel"
+    pkg: "stunnel4"
     state: present
     update_cache: yes
     cache_valid_time: 3600
