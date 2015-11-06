@@ -1,0 +1,21 @@
+---
+
+- name: stunnel | install (pinned version)
+  apt:
+    pkg: "stunnel={{ stunnel_version }}"
+    state: present
+    update_cache: yes
+    cache_valid_time: 3600
+  become: yes
+  become_method: sudo
+  when: stunnel_version is defined and stunnel_version|length > 1
+
+- name: stunnel | install
+  apt:
+    pkg: "stunnel"
+    state: present
+    update_cache: yes
+    cache_valid_time: 3600
+  become: yes
+  become_method: sudo
+  when: not (stunnel_version is defined and stunnel_version|length > 1)

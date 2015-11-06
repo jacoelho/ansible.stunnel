@@ -1,0 +1,15 @@
+---
+
+galaxy_info:
+  author: Jose Coelho
+  description: configure redis-server
+  license: MIT
+  min_ansible_version: 1.9
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+  galaxy_tags:
+    - system
+    - redis
+dependencies: []
