@@ -18,7 +18,7 @@ for k, v in configs.iteritems():
 		continue
 
 	print "{{% if {0} is defined and {0}|string|length > 0 %}}".format(k)
-	print "{{% if {0}|is_list %}}".format(k)
+	print "{{% if {0} is not string and {0} is not number %}}".format(k)
 	print "{{% for item in {0} %}}".format(k)
 	print "{0} = {{{{ item }}}}".format(key_global[k])
 	print "{% endfor %}"
@@ -37,7 +37,7 @@ print "{% for service in stunnel_services %}"
 print "[{{ service.name }}]"
 for k, v in service.iteritems():
 	print "{{% if service.{0} is defined and service.{0}|string|length > 0 %}}".format(k)
-	print "{{% if service.{0}|is_list %}}".format(k)
+	print "{{% if service.{0} is not string and service.{0} is not number %}}".format(k)
 	print "{{% for item in service.{0} %}}".format(k)
 	print "{0} = {{{{ item }}}}".format(key_service[k])
 	print "{% endfor %}"

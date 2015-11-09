@@ -1,5 +1,5 @@
 {% if stunnel_log is defined and stunnel_log|string|length > 0 %}
-{% if stunnel_log|is_list %}
+{% if stunnel_log is not string and stunnel_log is not number %}
 {% for item in stunnel_log %}
 log = {{ item }}
 {% endfor %}
@@ -8,7 +8,7 @@ log = {{ stunnel_log }}
 {% endif %}
 {% endif %}
 {% if stunnel_engine_default is defined and stunnel_engine_default|string|length > 0 %}
-{% if stunnel_engine_default|is_list %}
+{% if stunnel_engine_default is not string and stunnel_engine_default is not number %}
 {% for item in stunnel_engine_default %}
 engineDefault = {{ item }}
 {% endfor %}
@@ -17,7 +17,7 @@ engineDefault = {{ stunnel_engine_default }}
 {% endif %}
 {% endif %}
 {% if stunnel_engine is defined and stunnel_engine|string|length > 0 %}
-{% if stunnel_engine|is_list %}
+{% if stunnel_engine is not string and stunnel_engine is not number %}
 {% for item in stunnel_engine %}
 engine = {{ item }}
 {% endfor %}
@@ -26,7 +26,7 @@ engine = {{ stunnel_engine }}
 {% endif %}
 {% endif %}
 {% if stunnel_syslog is defined and stunnel_syslog|string|length > 0 %}
-{% if stunnel_syslog|is_list %}
+{% if stunnel_syslog is not string and stunnel_syslog is not number %}
 {% for item in stunnel_syslog %}
 syslog = {{ item }}
 {% endfor %}
@@ -35,7 +35,7 @@ syslog = {{ stunnel_syslog }}
 {% endif %}
 {% endif %}
 {% if stunnel_key is defined and stunnel_key|string|length > 0 %}
-{% if stunnel_key|is_list %}
+{% if stunnel_key is not string and stunnel_key is not number %}
 {% for item in stunnel_key %}
 key = {{ item }}
 {% endfor %}
@@ -44,7 +44,7 @@ key = {{ stunnel_key }}
 {% endif %}
 {% endif %}
 {% if stunnel_foreground is defined and stunnel_foreground|string|length > 0 %}
-{% if stunnel_foreground|is_list %}
+{% if stunnel_foreground is not string and stunnel_foreground is not number %}
 {% for item in stunnel_foreground %}
 foreground = {{ item }}
 {% endfor %}
@@ -53,7 +53,7 @@ foreground = {{ stunnel_foreground }}
 {% endif %}
 {% endif %}
 {% if stunnel_setuid is defined and stunnel_setuid|string|length > 0 %}
-{% if stunnel_setuid|is_list %}
+{% if stunnel_setuid is not string and stunnel_setuid is not number %}
 {% for item in stunnel_setuid %}
 setuid = {{ item }}
 {% endfor %}
@@ -62,7 +62,7 @@ setuid = {{ stunnel_setuid }}
 {% endif %}
 {% endif %}
 {% if stunnel_options is defined and stunnel_options|string|length > 0 %}
-{% if stunnel_options|is_list %}
+{% if stunnel_options is not string and stunnel_options is not number %}
 {% for item in stunnel_options %}
 options = {{ item }}
 {% endfor %}
@@ -71,7 +71,7 @@ options = {{ stunnel_options }}
 {% endif %}
 {% endif %}
 {% if stunnel_setgid is defined and stunnel_setgid|string|length > 0 %}
-{% if stunnel_setgid|is_list %}
+{% if stunnel_setgid is not string and stunnel_setgid is not number %}
 {% for item in stunnel_setgid %}
 setgid = {{ item }}
 {% endfor %}
@@ -80,7 +80,7 @@ setgid = {{ stunnel_setgid }}
 {% endif %}
 {% endif %}
 {% if stunnel_rnd_bytes is defined and stunnel_rnd_bytes|string|length > 0 %}
-{% if stunnel_rnd_bytes|is_list %}
+{% if stunnel_rnd_bytes is not string and stunnel_rnd_bytes is not number %}
 {% for item in stunnel_rnd_bytes %}
 RNDbytes = {{ item }}
 {% endfor %}
@@ -89,7 +89,7 @@ RNDbytes = {{ stunnel_rnd_bytes }}
 {% endif %}
 {% endif %}
 {% if stunnel_fips is defined and stunnel_fips|string|length > 0 %}
-{% if stunnel_fips|is_list %}
+{% if stunnel_fips is not string and stunnel_fips is not number %}
 {% for item in stunnel_fips %}
 fips = {{ item }}
 {% endfor %}
@@ -98,7 +98,7 @@ fips = {{ stunnel_fips }}
 {% endif %}
 {% endif %}
 {% if stunnel_cert is defined and stunnel_cert|string|length > 0 %}
-{% if stunnel_cert|is_list %}
+{% if stunnel_cert is not string and stunnel_cert is not number %}
 {% for item in stunnel_cert %}
 cert = {{ item }}
 {% endfor %}
@@ -107,7 +107,7 @@ cert = {{ stunnel_cert }}
 {% endif %}
 {% endif %}
 {% if stunnel_compression is defined and stunnel_compression|string|length > 0 %}
-{% if stunnel_compression|is_list %}
+{% if stunnel_compression is not string and stunnel_compression is not number %}
 {% for item in stunnel_compression %}
 compression = {{ item }}
 {% endfor %}
@@ -116,7 +116,7 @@ compression = {{ stunnel_compression }}
 {% endif %}
 {% endif %}
 {% if stunnel_service is defined and stunnel_service|string|length > 0 %}
-{% if stunnel_service|is_list %}
+{% if stunnel_service is not string and stunnel_service is not number %}
 {% for item in stunnel_service %}
 service = {{ item }}
 {% endfor %}
@@ -125,7 +125,7 @@ service = {{ stunnel_service }}
 {% endif %}
 {% endif %}
 {% if stunnel_ca_file is defined and stunnel_ca_file|string|length > 0 %}
-{% if stunnel_ca_file|is_list %}
+{% if stunnel_ca_file is not string and stunnel_ca_file is not number %}
 {% for item in stunnel_ca_file %}
 CAfile = {{ item }}
 {% endfor %}
@@ -134,7 +134,7 @@ CAfile = {{ stunnel_ca_file }}
 {% endif %}
 {% endif %}
 {% if stunnel_chroot is defined and stunnel_chroot|string|length > 0 %}
-{% if stunnel_chroot|is_list %}
+{% if stunnel_chroot is not string and stunnel_chroot is not number %}
 {% for item in stunnel_chroot %}
 chroot = {{ item }}
 {% endfor %}
@@ -143,7 +143,7 @@ chroot = {{ stunnel_chroot }}
 {% endif %}
 {% endif %}
 {% if stunnel_ssl_version is defined and stunnel_ssl_version|string|length > 0 %}
-{% if stunnel_ssl_version|is_list %}
+{% if stunnel_ssl_version is not string and stunnel_ssl_version is not number %}
 {% for item in stunnel_ssl_version %}
 sslVersion = {{ item }}
 {% endfor %}
@@ -152,7 +152,7 @@ sslVersion = {{ stunnel_ssl_version }}
 {% endif %}
 {% endif %}
 {% if stunnel_socket is defined and stunnel_socket|string|length > 0 %}
-{% if stunnel_socket|is_list %}
+{% if stunnel_socket is not string and stunnel_socket is not number %}
 {% for item in stunnel_socket %}
 socket = {{ item }}
 {% endfor %}
@@ -161,7 +161,7 @@ socket = {{ stunnel_socket }}
 {% endif %}
 {% endif %}
 {% if stunnel_rnd_overwrite is defined and stunnel_rnd_overwrite|string|length > 0 %}
-{% if stunnel_rnd_overwrite|is_list %}
+{% if stunnel_rnd_overwrite is not string and stunnel_rnd_overwrite is not number %}
 {% for item in stunnel_rnd_overwrite %}
 RNDoverwrite = {{ item }}
 {% endfor %}
@@ -170,7 +170,7 @@ RNDoverwrite = {{ stunnel_rnd_overwrite }}
 {% endif %}
 {% endif %}
 {% if stunnel_output is defined and stunnel_output|string|length > 0 %}
-{% if stunnel_output|is_list %}
+{% if stunnel_output is not string and stunnel_output is not number %}
 {% for item in stunnel_output %}
 output = {{ item }}
 {% endfor %}
@@ -179,7 +179,7 @@ output = {{ stunnel_output }}
 {% endif %}
 {% endif %}
 {% if stunnel_verify is defined and stunnel_verify|string|length > 0 %}
-{% if stunnel_verify|is_list %}
+{% if stunnel_verify is not string and stunnel_verify is not number %}
 {% for item in stunnel_verify %}
 verify = {{ item }}
 {% endfor %}
@@ -188,7 +188,7 @@ verify = {{ stunnel_verify }}
 {% endif %}
 {% endif %}
 {% if stunnel_pid is defined and stunnel_pid|string|length > 0 %}
-{% if stunnel_pid|is_list %}
+{% if stunnel_pid is not string and stunnel_pid is not number %}
 {% for item in stunnel_pid %}
 pid = {{ item }}
 {% endfor %}
@@ -197,7 +197,7 @@ pid = {{ stunnel_pid }}
 {% endif %}
 {% endif %}
 {% if stunnel_debug is defined and stunnel_debug|string|length > 0 %}
-{% if stunnel_debug|is_list %}
+{% if stunnel_debug is not string and stunnel_debug is not number %}
 {% for item in stunnel_debug %}
 debug = {{ item }}
 {% endfor %}
@@ -206,7 +206,7 @@ debug = {{ stunnel_debug }}
 {% endif %}
 {% endif %}
 {% if stunnel_egd is defined and stunnel_egd|string|length > 0 %}
-{% if stunnel_egd|is_list %}
+{% if stunnel_egd is not string and stunnel_egd is not number %}
 {% for item in stunnel_egd %}
 EGD = {{ item }}
 {% endfor %}
@@ -215,7 +215,7 @@ EGD = {{ stunnel_egd }}
 {% endif %}
 {% endif %}
 {% if stunnel_engine_ctrl is defined and stunnel_engine_ctrl|string|length > 0 %}
-{% if stunnel_engine_ctrl|is_list %}
+{% if stunnel_engine_ctrl is not string and stunnel_engine_ctrl is not number %}
 {% for item in stunnel_engine_ctrl %}
 engineCtrl = {{ item }}
 {% endfor %}
@@ -227,7 +227,7 @@ engineCtrl = {{ stunnel_engine_ctrl }}
 {% for service in stunnel_services %}
 [{{ service.name }}]
 {% if service.protocol_domain is defined and service.protocol_domain|string|length > 0 %}
-{% if service.protocol_domain|is_list %}
+{% if service.protocol_domain is not string and service.protocol_domain is not number %}
 {% for item in service.protocol_domain %}
 protocolDomain = {{ item }}
 {% endfor %}
@@ -236,7 +236,7 @@ protocolDomain = {{ service.protocol_domain }}
 {% endif %}
 {% endif %}
 {% if service.ocspflag is defined and service.ocspflag|string|length > 0 %}
-{% if service.ocspflag|is_list %}
+{% if service.ocspflag is not string and service.ocspflag is not number %}
 {% for item in service.ocspflag %}
 OCSPflag = {{ item }}
 {% endfor %}
@@ -245,7 +245,7 @@ OCSPflag = {{ service.ocspflag }}
 {% endif %}
 {% endif %}
 {% if service.session_cache_timeout is defined and service.session_cache_timeout|string|length > 0 %}
-{% if service.session_cache_timeout|is_list %}
+{% if service.session_cache_timeout is not string and service.session_cache_timeout is not number %}
 {% for item in service.session_cache_timeout %}
 sessionCacheTimeout = {{ item }}
 {% endfor %}
@@ -254,7 +254,7 @@ sessionCacheTimeout = {{ service.session_cache_timeout }}
 {% endif %}
 {% endif %}
 {% if service.psk_secrets is defined and service.psk_secrets|string|length > 0 %}
-{% if service.psk_secrets|is_list %}
+{% if service.psk_secrets is not string and service.psk_secrets is not number %}
 {% for item in service.psk_secrets %}
 PSKsecrets = {{ item }}
 {% endfor %}
@@ -263,7 +263,7 @@ PSKsecrets = {{ service.psk_secrets }}
 {% endif %}
 {% endif %}
 {% if service.protocol is defined and service.protocol|string|length > 0 %}
-{% if service.protocol|is_list %}
+{% if service.protocol is not string and service.protocol is not number %}
 {% for item in service.protocol %}
 protocol = {{ item }}
 {% endfor %}
@@ -272,7 +272,7 @@ protocol = {{ service.protocol }}
 {% endif %}
 {% endif %}
 {% if service.pty is defined and service.pty|string|length > 0 %}
-{% if service.pty|is_list %}
+{% if service.pty is not string and service.pty is not number %}
 {% for item in service.pty %}
 pty = {{ item }}
 {% endfor %}
@@ -281,7 +281,7 @@ pty = {{ service.pty }}
 {% endif %}
 {% endif %}
 {% if service.curve is defined and service.curve|string|length > 0 %}
-{% if service.curve|is_list %}
+{% if service.curve is not string and service.curve is not number %}
 {% for item in service.curve %}
 curve = {{ item }}
 {% endfor %}
@@ -290,7 +290,7 @@ curve = {{ service.curve }}
 {% endif %}
 {% endif %}
 {% if service.ocspaia is defined and service.ocspaia|string|length > 0 %}
-{% if service.ocspaia|is_list %}
+{% if service.ocspaia is not string and service.ocspaia is not number %}
 {% for item in service.ocspaia %}
 OCSPaia = {{ item }}
 {% endfor %}
@@ -299,7 +299,7 @@ OCSPaia = {{ service.ocspaia }}
 {% endif %}
 {% endif %}
 {% if service.accept is defined and service.accept|string|length > 0 %}
-{% if service.accept|is_list %}
+{% if service.accept is not string and service.accept is not number %}
 {% for item in service.accept %}
 accept = {{ item }}
 {% endfor %}
@@ -308,7 +308,7 @@ accept = {{ service.accept }}
 {% endif %}
 {% endif %}
 {% if service.connect is defined and service.connect|string|length > 0 %}
-{% if service.connect|is_list %}
+{% if service.connect is not string and service.connect is not number %}
 {% for item in service.connect %}
 connect = {{ item }}
 {% endfor %}
@@ -317,7 +317,7 @@ connect = {{ service.connect }}
 {% endif %}
 {% endif %}
 {% if service.check_email is defined and service.check_email|string|length > 0 %}
-{% if service.check_email|is_list %}
+{% if service.check_email is not string and service.check_email is not number %}
 {% for item in service.check_email %}
 checkEmail = {{ item }}
 {% endfor %}
@@ -326,7 +326,7 @@ checkEmail = {{ service.check_email }}
 {% endif %}
 {% endif %}
 {% if service.exec_args is defined and service.exec_args|string|length > 0 %}
-{% if service.exec_args|is_list %}
+{% if service.exec_args is not string and service.exec_args is not number %}
 {% for item in service.exec_args %}
 execArgs = {{ item }}
 {% endfor %}
@@ -335,7 +335,7 @@ execArgs = {{ service.exec_args }}
 {% endif %}
 {% endif %}
 {% if service.libwrap is defined and service.libwrap|string|length > 0 %}
-{% if service.libwrap|is_list %}
+{% if service.libwrap is not string and service.libwrap is not number %}
 {% for item in service.libwrap %}
 libwrap = {{ item }}
 {% endfor %}
@@ -344,7 +344,7 @@ libwrap = {{ service.libwrap }}
 {% endif %}
 {% endif %}
 {% if service.protocol_username is defined and service.protocol_username|string|length > 0 %}
-{% if service.protocol_username|is_list %}
+{% if service.protocol_username is not string and service.protocol_username is not number %}
 {% for item in service.protocol_username %}
 protocolUsername = {{ item }}
 {% endfor %}
@@ -353,7 +353,7 @@ protocolUsername = {{ service.protocol_username }}
 {% endif %}
 {% endif %}
 {% if service.ocsp is defined and service.ocsp|string|length > 0 %}
-{% if service.ocsp|is_list %}
+{% if service.ocsp is not string and service.ocsp is not number %}
 {% for item in service.ocsp %}
 OCSP = {{ item }}
 {% endfor %}
@@ -362,7 +362,7 @@ OCSP = {{ service.ocsp }}
 {% endif %}
 {% endif %}
 {% if service.redirect is defined and service.redirect|string|length > 0 %}
-{% if service.redirect|is_list %}
+{% if service.redirect is not string and service.redirect is not number %}
 {% for item in service.redirect %}
 redirect = {{ item }}
 {% endfor %}
@@ -371,7 +371,7 @@ redirect = {{ service.redirect }}
 {% endif %}
 {% endif %}
 {% if service.retry is defined and service.retry|string|length > 0 %}
-{% if service.retry|is_list %}
+{% if service.retry is not string and service.retry is not number %}
 {% for item in service.retry %}
 retry = {{ item }}
 {% endfor %}
@@ -380,7 +380,7 @@ retry = {{ service.retry }}
 {% endif %}
 {% endif %}
 {% if service.verify is defined and service.verify|string|length > 0 %}
-{% if service.verify|is_list %}
+{% if service.verify is not string and service.verify is not number %}
 {% for item in service.verify %}
 verify = {{ item }}
 {% endfor %}
@@ -389,7 +389,7 @@ verify = {{ service.verify }}
 {% endif %}
 {% endif %}
 {% if service.engine_id is defined and service.engine_id|string|length > 0 %}
-{% if service.engine_id|is_list %}
+{% if service.engine_id is not string and service.engine_id is not number %}
 {% for item in service.engine_id %}
 engineId = {{ item }}
 {% endfor %}
@@ -398,7 +398,7 @@ engineId = {{ service.engine_id }}
 {% endif %}
 {% endif %}
 {% if service.crl_file is defined and service.crl_file|string|length > 0 %}
-{% if service.crl_file|is_list %}
+{% if service.crl_file is not string and service.crl_file is not number %}
 {% for item in service.crl_file %}
 CRLfile = {{ item }}
 {% endfor %}
@@ -407,7 +407,7 @@ CRLfile = {{ service.crl_file }}
 {% endif %}
 {% endif %}
 {% if service.stack is defined and service.stack|string|length > 0 %}
-{% if service.stack|is_list %}
+{% if service.stack is not string and service.stack is not number %}
 {% for item in service.stack %}
 stack = {{ item }}
 {% endfor %}
@@ -416,7 +416,7 @@ stack = {{ service.stack }}
 {% endif %}
 {% endif %}
 {% if service.delay is defined and service.delay|string|length > 0 %}
-{% if service.delay|is_list %}
+{% if service.delay is not string and service.delay is not number %}
 {% for item in service.delay %}
 delay = {{ item }}
 {% endfor %}
@@ -425,7 +425,7 @@ delay = {{ service.delay }}
 {% endif %}
 {% endif %}
 {% if service.timeout_connect is defined and service.timeout_connect|string|length > 0 %}
-{% if service.timeout_connect|is_list %}
+{% if service.timeout_connect is not string and service.timeout_connect is not number %}
 {% for item in service.timeout_connect %}
 TIMEOUTconnect = {{ item }}
 {% endfor %}
@@ -434,7 +434,7 @@ TIMEOUTconnect = {{ service.timeout_connect }}
 {% endif %}
 {% endif %}
 {% if service.setgid is defined and service.setgid|string|length > 0 %}
-{% if service.setgid|is_list %}
+{% if service.setgid is not string and service.setgid is not number %}
 {% for item in service.setgid %}
 setgid = {{ item }}
 {% endfor %}
@@ -443,7 +443,7 @@ setgid = {{ service.setgid }}
 {% endif %}
 {% endif %}
 {% if service.renegotiation is defined and service.renegotiation|string|length > 0 %}
-{% if service.renegotiation|is_list %}
+{% if service.renegotiation is not string and service.renegotiation is not number %}
 {% for item in service.renegotiation %}
 renegotiation = {{ item }}
 {% endfor %}
@@ -452,7 +452,7 @@ renegotiation = {{ service.renegotiation }}
 {% endif %}
 {% endif %}
 {% if service.include is defined and service.include|string|length > 0 %}
-{% if service.include|is_list %}
+{% if service.include is not string and service.include is not number %}
 {% for item in service.include %}
 include = {{ item }}
 {% endfor %}
@@ -461,7 +461,7 @@ include = {{ service.include }}
 {% endif %}
 {% endif %}
 {% if service.config is defined and service.config|string|length > 0 %}
-{% if service.config|is_list %}
+{% if service.config is not string and service.config is not number %}
 {% for item in service.config %}
 config = {{ item }}
 {% endfor %}
@@ -470,7 +470,7 @@ config = {{ service.config }}
 {% endif %}
 {% endif %}
 {% if service.ciphers is defined and service.ciphers|string|length > 0 %}
-{% if service.ciphers|is_list %}
+{% if service.ciphers is not string and service.ciphers is not number %}
 {% for item in service.ciphers %}
 ciphers = {{ item }}
 {% endfor %}
@@ -479,7 +479,7 @@ ciphers = {{ service.ciphers }}
 {% endif %}
 {% endif %}
 {% if service.timeout_idle is defined and service.timeout_idle|string|length > 0 %}
-{% if service.timeout_idle|is_list %}
+{% if service.timeout_idle is not string and service.timeout_idle is not number %}
 {% for item in service.timeout_idle %}
 TIMEOUTidle = {{ item }}
 {% endfor %}
@@ -488,7 +488,7 @@ TIMEOUTidle = {{ service.timeout_idle }}
 {% endif %}
 {% endif %}
 {% if service.exec is defined and service.exec|string|length > 0 %}
-{% if service.exec|is_list %}
+{% if service.exec is not string and service.exec is not number %}
 {% for item in service.exec %}
 exec = {{ item }}
 {% endfor %}
@@ -497,7 +497,7 @@ exec = {{ service.exec }}
 {% endif %}
 {% endif %}
 {% if service.sessond is defined and service.sessond|string|length > 0 %}
-{% if service.sessond|is_list %}
+{% if service.sessond is not string and service.sessond is not number %}
 {% for item in service.sessond %}
 sessiond = {{ item }}
 {% endfor %}
@@ -506,7 +506,7 @@ sessiond = {{ service.sessond }}
 {% endif %}
 {% endif %}
 {% if service.crl_path is defined and service.crl_path|string|length > 0 %}
-{% if service.crl_path|is_list %}
+{% if service.crl_path is not string and service.crl_path is not number %}
 {% for item in service.crl_path %}
 CRLpath = {{ item }}
 {% endfor %}
@@ -515,7 +515,7 @@ CRLpath = {{ service.crl_path }}
 {% endif %}
 {% endif %}
 {% if service.psk_identity is defined and service.psk_identity|string|length > 0 %}
-{% if service.psk_identity|is_list %}
+{% if service.psk_identity is not string and service.psk_identity is not number %}
 {% for item in service.psk_identity %}
 PSKidentity = {{ item }}
 {% endfor %}
@@ -524,7 +524,7 @@ PSKidentity = {{ service.psk_identity }}
 {% endif %}
 {% endif %}
 {% if service.sni is defined and service.sni|string|length > 0 %}
-{% if service.sni|is_list %}
+{% if service.sni is not string and service.sni is not number %}
 {% for item in service.sni %}
 sni = {{ item }}
 {% endfor %}
@@ -533,7 +533,7 @@ sni = {{ service.sni }}
 {% endif %}
 {% endif %}
 {% if service.debug is defined and service.debug|string|length > 0 %}
-{% if service.debug|is_list %}
+{% if service.debug is not string and service.debug is not number %}
 {% for item in service.debug %}
 debug = {{ item }}
 {% endfor %}
@@ -542,7 +542,7 @@ debug = {{ service.debug }}
 {% endif %}
 {% endif %}
 {% if service.timeout_close is defined and service.timeout_close|string|length > 0 %}
-{% if service.timeout_close|is_list %}
+{% if service.timeout_close is not string and service.timeout_close is not number %}
 {% for item in service.timeout_close %}
 TIMEOUTclose = {{ item }}
 {% endfor %}
@@ -551,7 +551,7 @@ TIMEOUTclose = {{ service.timeout_close }}
 {% endif %}
 {% endif %}
 {% if service.key is defined and service.key|string|length > 0 %}
-{% if service.key|is_list %}
+{% if service.key is not string and service.key is not number %}
 {% for item in service.key %}
 key = {{ item }}
 {% endfor %}
@@ -560,7 +560,7 @@ key = {{ service.key }}
 {% endif %}
 {% endif %}
 {% if service.protocol_host is defined and service.protocol_host|string|length > 0 %}
-{% if service.protocol_host|is_list %}
+{% if service.protocol_host is not string and service.protocol_host is not number %}
 {% for item in service.protocol_host %}
 protocolHost = {{ item }}
 {% endfor %}
@@ -569,7 +569,7 @@ protocolHost = {{ service.protocol_host }}
 {% endif %}
 {% endif %}
 {% if service.session_cache_size is defined and service.session_cache_size|string|length > 0 %}
-{% if service.session_cache_size|is_list %}
+{% if service.session_cache_size is not string and service.session_cache_size is not number %}
 {% for item in service.session_cache_size %}
 sessionCacheSize = {{ item }}
 {% endfor %}
@@ -578,7 +578,7 @@ sessionCacheSize = {{ service.session_cache_size }}
 {% endif %}
 {% endif %}
 {% if service.transparent is defined and service.transparent|string|length > 0 %}
-{% if service.transparent|is_list %}
+{% if service.transparent is not string and service.transparent is not number %}
 {% for item in service.transparent %}
 transparent = {{ item }}
 {% endfor %}
@@ -587,7 +587,7 @@ transparent = {{ service.transparent }}
 {% endif %}
 {% endif %}
 {% if service.setuid is defined and service.setuid|string|length > 0 %}
-{% if service.setuid|is_list %}
+{% if service.setuid is not string and service.setuid is not number %}
 {% for item in service.setuid %}
 setuid = {{ item }}
 {% endfor %}
@@ -596,7 +596,7 @@ setuid = {{ service.setuid }}
 {% endif %}
 {% endif %}
 {% if service.check_host is defined and service.check_host|string|length > 0 %}
-{% if service.check_host|is_list %}
+{% if service.check_host is not string and service.check_host is not number %}
 {% for item in service.check_host %}
 checkHost = {{ item }}
 {% endfor %}
@@ -605,7 +605,7 @@ checkHost = {{ service.check_host }}
 {% endif %}
 {% endif %}
 {% if service.reset is defined and service.reset|string|length > 0 %}
-{% if service.reset|is_list %}
+{% if service.reset is not string and service.reset is not number %}
 {% for item in service.reset %}
 reset = {{ item }}
 {% endfor %}
@@ -614,7 +614,7 @@ reset = {{ service.reset }}
 {% endif %}
 {% endif %}
 {% if service.ident is defined and service.ident|string|length > 0 %}
-{% if service.ident|is_list %}
+{% if service.ident is not string and service.ident is not number %}
 {% for item in service.ident %}
 ident = {{ item }}
 {% endfor %}
@@ -623,7 +623,7 @@ ident = {{ service.ident }}
 {% endif %}
 {% endif %}
 {% if service.ca_file is defined and service.ca_file|string|length > 0 %}
-{% if service.ca_file|is_list %}
+{% if service.ca_file is not string and service.ca_file is not number %}
 {% for item in service.ca_file %}
 CAfile = {{ item }}
 {% endfor %}
@@ -632,7 +632,7 @@ CAfile = {{ service.ca_file }}
 {% endif %}
 {% endif %}
 {% if service.protocol_password is defined and service.protocol_password|string|length > 0 %}
-{% if service.protocol_password|is_list %}
+{% if service.protocol_password is not string and service.protocol_password is not number %}
 {% for item in service.protocol_password %}
 protocolPassword = {{ item }}
 {% endfor %}
@@ -641,7 +641,7 @@ protocolPassword = {{ service.protocol_password }}
 {% endif %}
 {% endif %}
 {% if service.timeout_busy is defined and service.timeout_busy|string|length > 0 %}
-{% if service.timeout_busy|is_list %}
+{% if service.timeout_busy is not string and service.timeout_busy is not number %}
 {% for item in service.timeout_busy %}
 TIMEOUTbusy = {{ item }}
 {% endfor %}
@@ -650,7 +650,7 @@ TIMEOUTbusy = {{ service.timeout_busy }}
 {% endif %}
 {% endif %}
 {% if service.log_id is defined and service.log_id|string|length > 0 %}
-{% if service.log_id|is_list %}
+{% if service.log_id is not string and service.log_id is not number %}
 {% for item in service.log_id %}
 logId = {{ item }}
 {% endfor %}
@@ -659,7 +659,7 @@ logId = {{ service.log_id }}
 {% endif %}
 {% endif %}
 {% if service.check_ip is defined and service.check_ip|string|length > 0 %}
-{% if service.check_ip|is_list %}
+{% if service.check_ip is not string and service.check_ip is not number %}
 {% for item in service.check_ip %}
 checkIP = {{ item }}
 {% endfor %}
@@ -668,7 +668,7 @@ checkIP = {{ service.check_ip }}
 {% endif %}
 {% endif %}
 {% if service.failover is defined and service.failover|string|length > 0 %}
-{% if service.failover|is_list %}
+{% if service.failover is not string and service.failover is not number %}
 {% for item in service.failover %}
 failover = {{ item }}
 {% endfor %}
@@ -677,7 +677,7 @@ failover = {{ service.failover }}
 {% endif %}
 {% endif %}
 {% if service.ssl_version is defined and service.ssl_version|string|length > 0 %}
-{% if service.ssl_version|is_list %}
+{% if service.ssl_version is not string and service.ssl_version is not number %}
 {% for item in service.ssl_version %}
 sslVersion = {{ item }}
 {% endfor %}
@@ -686,7 +686,7 @@ sslVersion = {{ service.ssl_version }}
 {% endif %}
 {% endif %}
 {% if service.engine_num is defined and service.engine_num|string|length > 0 %}
-{% if service.engine_num|is_list %}
+{% if service.engine_num is not string and service.engine_num is not number %}
 {% for item in service.engine_num %}
 engineNum = {{ item }}
 {% endfor %}
@@ -695,7 +695,7 @@ engineNum = {{ service.engine_num }}
 {% endif %}
 {% endif %}
 {% if service.local is defined and service.local|string|length > 0 %}
-{% if service.local|is_list %}
+{% if service.local is not string and service.local is not number %}
 {% for item in service.local %}
 local = {{ item }}
 {% endfor %}
@@ -704,7 +704,7 @@ local = {{ service.local }}
 {% endif %}
 {% endif %}
 {% if service.cert is defined and service.cert|string|length > 0 %}
-{% if service.cert|is_list %}
+{% if service.cert is not string and service.cert is not number %}
 {% for item in service.cert %}
 cert = {{ item }}
 {% endfor %}
@@ -713,7 +713,7 @@ cert = {{ service.cert }}
 {% endif %}
 {% endif %}
 {% if service.client is defined and service.client|string|length > 0 %}
-{% if service.client|is_list %}
+{% if service.client is not string and service.client is not number %}
 {% for item in service.client %}
 client = {{ item }}
 {% endfor %}
@@ -722,7 +722,7 @@ client = {{ service.client }}
 {% endif %}
 {% endif %}
 {% if service.ca_path is defined and service.ca_path|string|length > 0 %}
-{% if service.ca_path|is_list %}
+{% if service.ca_path is not string and service.ca_path is not number %}
 {% for item in service.ca_path %}
 CApath = {{ item }}
 {% endfor %}
@@ -731,7 +731,7 @@ CApath = {{ service.ca_path }}
 {% endif %}
 {% endif %}
 {% if service.protocol_authentication is defined and service.protocol_authentication|string|length > 0 %}
-{% if service.protocol_authentication|is_list %}
+{% if service.protocol_authentication is not string and service.protocol_authentication is not number %}
 {% for item in service.protocol_authentication %}
 protocolAuthentication = {{ item }}
 {% endfor %}
@@ -740,7 +740,7 @@ protocolAuthentication = {{ service.protocol_authentication }}
 {% endif %}
 {% endif %}
 {% if service.options is defined and service.options|string|length > 0 %}
-{% if service.options|is_list %}
+{% if service.options is not string and service.options is not number %}
 {% for item in service.options %}
 options = {{ item }}
 {% endfor %}

@@ -28,7 +28,7 @@ Sample configuration:
 Dependencies
 ------------
 
-jinja2_filter needs to be copied to filter_plugins: [test_list.py](https://github.com/jacoelho/ansible.stunnel/blob/master/tests/filter_plugins/test_list.py)
+None.
 
 Example Playbook
 ----------------
